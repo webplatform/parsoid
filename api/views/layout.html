@@ -1,26 +1,101 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		{{{headers}}}
-		<script>
-			// Work around the set base element.
-			var els = [{ src: '/static/css/style.css', css: true }];
-			{{{javascripts}}}
-			function load(o) {
-				var el = document.createElement(o.css ? 'link' : 'script');
-				if (o.css) {
-					el.setAttribute('type', 'text/css');
-					el.setAttribute('rel', 'stylesheet');
-				}
-				el.setAttribute(o.css ? 'href' : 'src',
-					window.location.origin + o.src);
-				document.head.appendChild(el);
-			}
-			els.forEach(load);
-		</script>
-	</head>
-	<body>
-		{{{body}}}
-	</body>
+<html lang="en" dir="ltr">
+  <head>
+    <title>WebPlatform Docs · WebPlatform Docs · WPD · WebPlatform.org</title>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="//www.webplatform.org/assets/css/squished.css" />
+    <!--[if lt IE 7]><script src="//www.webplatform.org/assets/bower_components/ie7-js/lib/IE7.js"></script><![endif]-->
+    <!--[if lt IE 8]><script src="//www.webplatform.org/assets/bower_components/ie7-js/lib/IE8.js"></script><![endif]-->
+    <!--[if lt IE 9]><script src="//www.webplatform.org/assets/bower_components/ie7-js/lib/IE9.js"></script><![endif]-->
+    <!--[if lt IE 9]><script src="//docs.webplatform.org/w/extensions/WebPlatformDocs/skin/html5shiv.js"></script><![endif]-->
+    <!--[if lt IE 8]><link rel="stylesheet" href="/assets/css/ie7.css"><![endif]-->
+
+  </head>
+  <body class="mediawiki ltr sitedir-ltr skin-webplatform">
+        <div id="mw-page-base" class="noprint"></div>
+        <div id="mw-head-base" class="noprint"></div>
+        <header id="mw-head" class="noprint">
+          <div class="container">
+            <div id="p-logo"><a href="//www.webplatform.org/" title="Visit the main page"></a></div>
+          </div>
+        </header>
+        <nav id="sitenav">
+          <div class="container">
+            <ul class="links">
+              <li><a href="/wiki/Main_Page" class="active">THE DOCS</a></li>
+              <li><a href="/wiki/WPD:Community" title="WPD:Community">CONNECT</a></li>
+              <li><a href="/wiki/WPD:Contributors_Guide" title="WPD:Contributors Guide">CONTRIBUTE</a></li>
+              <li><a href="//blog.webplatform.org/">BLOG</a></li>
+              <li><a href="//project.webplatform.org/">ISSUES</a></li>
+            </ul>
+          </div>
+        </nav>
+        <!-- content -->
+        <div id="content" class="mw-body">
+          <div class="container">
+            <a id="top"></a>
+            <div class="tool-area"><div id="hierarchy-menu">&nbsp;</div></div>
+            <div id="page">
+              <div id="page-content">
+                <div id="main-content">
+{{{body}}}
+                </div>
+                <div class="topics-nav">
+                  <ul>
+                    <li><a href="/wiki/beginners">Beginners</a></li>
+                    <li><a href="/wiki/concepts">Concepts</a></li>
+                    <li><a href="/wiki/html">HTML</a></li>
+                    <li><a href="/wiki/css">CSS</a></li>
+                    <li><a href="/wiki/concepts/accessibility">Accessibility</a></li>
+                    <li><a href="/wiki/javascript">JavaScript</a></li>
+                    <li><a href="/wiki/dom">DOM</a></li>
+                    <li><a href="/wiki/svg">SVG</a></li>
+                  </ul>
+                </div><!-- /main content -->
+                <div class="clear"></div>
+              </div><!-- /page content -->
+            </div><!-- /page -->
+          </div><!-- /container -->
+        </div><!-- /content -->
+        <footer id="mw-footer">
+          <div class="container">
+            <div id="footer-wordmark">
+              <a href="/wiki/Template:CC-by-3.0" class="license">
+                <img src="//docs.webplatform.org/w/extensions/WebPlatformMediaWikiExtensionBundle/skin/images/cc-by-black.svg" width="120" height="42" alt="Content available under CC-BY, except where otherwise noted.">
+              </a>
+              <a href="//www.webplatform.org/"><span id="footer-title">WebPlatform<span id="footer-title-light">.org</span></span></a>
+            </div>
+            <ul class="stewards">
+              <li class="steward-w3c"><a href="//www.webplatform.org/stewards/w3c">W3C</a></li>
+              <li class="steward-adobe"><a href="//www.webplatform.org/stewards/adobe">Adobe</a></li>
+              <li class="steward-facebook"><a href="//www.webplatform.org/stewards/facebook">facebook</a></li>
+              <li class="steward-google"><a href="//www.webplatform.org/stewards/google">Google</a></li>
+              <li class="steward-hp"><a href="//www.webplatform.org/stewards/hp">HP</a></li>
+              <li class="steward-intel"><a href="//www.webplatform.org/stewards/intel">Intel</a></li>
+              <li class="steward-microsoft"><a href="//www.webplatform.org/stewards/microsoft">Microsoft</a></li>
+              <li class="steward-mozilla"><a href="//www.webplatform.org/stewards/mozilla">Mozilla</a></li>
+              <li class="steward-nokia"><a href="//www.webplatform.org/stewards/nokia">Nokia</a></li>
+              <li class="steward-opera"><a href="//www.webplatform.org/stewards/opera">Opera</a></li>
+            </ul>
+          </div>
+        </footer>
+<script>
+// Work around the set base element.
+var els = [{ src: '/static/css/style.css', css: true }];
+{{{javascripts}}}
+function load(o) {
+	var el = document.createElement(o.css ? 'link' : 'script');
+	if (o.css) {
+		el.setAttribute('type', 'text/css');
+		el.setAttribute('rel', 'stylesheet');
+	}
+	el.setAttribute(o.css ? 'href' : 'src',
+		window.location.origin + o.src);
+	document.head.appendChild(el);
+}
+els.forEach(load);
+</script>
+  </body>
 </html>
